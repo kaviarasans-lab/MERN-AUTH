@@ -33,7 +33,7 @@ export const AppContextProvider = (props) => {
 
     const getUserData = async () => {
         try {
-            const response = await axios.get(`${backendurl}/api/user/data`);
+            const response = await axios.get(`${backendurl}/api/user/data`,{},{ withCredentials: true });
             
             
             console.log("API Response:", response);

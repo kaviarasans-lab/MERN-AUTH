@@ -1,5 +1,5 @@
 import React, { useContext, useState, useEffect, useRef } from 'react'
-import { assets } from '../../../assets/asssets.js'
+import { assets } from '../../assets/asssets.js'
 import { useNavigate } from 'react-router-dom'
 import AppContent from '../context/AppContext.jsx';
 import { toast } from 'react-toastify';

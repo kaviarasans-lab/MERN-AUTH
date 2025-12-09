@@ -1,5 +1,4 @@
 import React from 'react'
-import { assets } from '../../../assets/asssets'
 import Navbar from '../components/Navbar'
 import Header from '../components/Header'
 
