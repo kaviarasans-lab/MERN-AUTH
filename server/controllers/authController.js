@@ -2,7 +2,7 @@ import jwt from 'jsonwebtoken';
 import bcrypt from "bcryptjs";
 import userModel from "../models/UserModel.js";
 import transporter from '../config/nodemailer.js';
-import { EMAIL_VERIFY_TEMPLATE,PASSWORD_RESET_TEMPLATE } from '../config/emailtemplates.js';
+import { EMAIL_VERIFY_TEMPLATE,PASSWORD_RESET_TEMPLATE } from '../../server/emailTemplates.js';
 
 
 export const register = async(req,res)=>{
