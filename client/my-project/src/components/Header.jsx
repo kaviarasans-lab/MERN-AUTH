@@ -1,10 +1,17 @@
 import React, { useContext } from 'react'
 import { assets } from '../../assets/asssets.js'
 import { AppContent } from '../context/AppContext.jsx';
+import { useNavigate } from 'react-router-dom';
 
 const Header = () => {
 
   const { userData } = useContext(AppContent);
+  const navigate = useNavigate()
+
+  const handleLogin = () =>{
+          
+          navigate('/login')
+  }
 
   return (
     <div className="flex flex-col items-center mt-20 px-4 text-center text-gray-800">
@@ -16,7 +23,7 @@ const Header = () => {
       />
 
       <h1 className="flex items-center gap-2 text-2xl sm:text-3xl font-medium mb-2">
-        Hey {userData ? userData.name : "Developer"}
+        Hey {userData ? userData.name : "Buddy"}
         <img src={assets.hand_wave} className="w-7 sm:w-8 aspect-square" />
       </h1>
 
@@ -28,9 +35,13 @@ const Header = () => {
         Let's start with a quick product tour and get you up and running in no time!
       </p>
 
-      <button className="border border-gray-500 rounded-full px-6 sm:px-8 py-2.5 hover:bg-gray-200 cursor-pointer transition">
+      <button onClick={handleLogin} className="border border-gray-500 rounded-full px-6 sm:px-8 py-2.5 hover:bg-gray-200 cursor-pointer transition">
         Get Started
       </button>
+
+      <p className="max-w-md text-gray-700 mb-4 mt-8">
+        Ready to begin? Click here to create your account.
+      </p>
 
     </div>
   );
